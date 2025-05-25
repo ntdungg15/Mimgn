@@ -1,0 +1,40 @@
+your-project/
+├── public/                     # Tài nguyên tĩnh (ảnh, favicon, robots.txt,...)
+│   └── images/
+│       └── logo.png
+├── src/                        # Mã nguồn chính (nằm gọn trong src)
+│   ├── app/                    # App Router (routing theo thư mục)
+│   │   ├── layout.tsx          # Layout tổng
+│   │   ├── page.tsx            # Trang chủ "/"
+│   │   ├── about/              # Route /about
+│   │   │   └── page.tsx
+│   │   └── dashboard/
+│   │       ├── layout.tsx      # Layout riêng cho dashboard
+│   │       └── page.tsx
+│   ├── components/             # Tái sử dụng UI component
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   ├── features/               # Tách chức năng thành module
+│   │   └── auth/
+│   │       ├── LoginForm.tsx
+│   │       ├── auth.service.ts
+│   │       └── auth.types.ts
+│   ├── hooks/                  # Custom React hooks
+│   │   └── useAuth.ts
+│   ├── lib/                    # Các hàm/tiện ích/middleware chung
+│   │   ├── axios.ts            # Cấu hình axios
+│   │   └── constants.ts
+│   ├── store/                  # Quản lý global state (nếu dùng Redux, Zustand,...)
+│   │   └── user.store.ts
+│   ├── styles/                 # File CSS toàn cục (chủ yếu là Tailwind entrypoint)
+│   │   └── globals.css
+│   ├── types/                  # Kiểu dữ liệu dùng chung
+│   │   └── user.d.ts
+│   └── utils/                  # Hàm helper (formatDate, handleError,...)
+│       └── formatDate.ts
+├── .gitignore
+├── next.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
